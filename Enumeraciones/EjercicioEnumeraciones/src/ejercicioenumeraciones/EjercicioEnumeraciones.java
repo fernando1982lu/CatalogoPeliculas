@@ -14,6 +14,14 @@ public class EjercicioEnumeraciones {
         //Hacemos un test del dia utilizado.
         
         indicarDia(Dias.VIERNES);
+        
+        // Utilizamos la enumeracion de paises
+        System.out.println("Continente N° 4: " + Continentes.AMERICA);
+        System.out.println("Paises de America: " + Continentes.AMERICA.getPaises());
+        
+        //Hacemos un test del número de paises por continente
+        System.out.println("");
+        imprimirContinentes();
     }
     
     public static void indicarDia(Dias dias){
@@ -40,6 +48,38 @@ public class EjercicioEnumeraciones {
             case DOMINGO:
                 System.out.println("Septimo dia de la semana");
                 break;
+            default:
+                System.out.println("Ese ya no es dia de la semana ");
+        }
+    }
+    
+    public static void indicarPaises(Continentes continentes){
+        
+        switch (continentes){
+            //Se puede usar un valor constante de la enumeracion directa
+            case AFRICA:
+                System.out.println("N° Paises en: " + continentes + ": " + continentes.getPaises());
+                break;
+            case EUROPA:
+                System.out.println("N° Paises en: " + continentes + ": " + continentes.getPaises());
+                break;
+            case ASIA:
+                System.out.println("N° Paises en: " + continentes + ": " + continentes.getPaises());
+                break;
+            case AMERICA:
+                System.out.println("N° Paises en: " + continentes + ": " + continentes.getPaises());
+                break;
+            case OCEANIA:
+                System.out.println("N° Paises en: " + continentes + ": " + continentes.getPaises());
+                break;
+            default:
+                System.out.println("Ese no es continente");
+        }
+    }
+    public static void imprimirContinentes(){
+        // Utilizamos un ForEach
+        for(Continentes c: Continentes.values()){
+            System.out.println("Continente: " + c + " continente " + c.getPaises() + "paises.");
         }
     }
     
