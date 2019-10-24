@@ -13,25 +13,16 @@ public enum Continentes {
     
     private  int paises;
     
-    continentes(int paises){
+    Continentes(int paises){
         this.setPaises(paises);
     }
 
-    /**
-     * @return the paises
-     */
     public int getPaises() {
         return paises;
     }
 
-    /**
-     * @param paises the paises to set
-     */
     public void setPaises(int paises) {
         this.paises = paises;
     }
-    
-    
-            
     
 }
