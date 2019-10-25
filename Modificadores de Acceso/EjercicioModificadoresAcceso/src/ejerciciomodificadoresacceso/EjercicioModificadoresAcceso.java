@@ -1,9 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ejerciciomodificadoresacceso;
+
+import paqueteA.ClaseB;
+import paqueteB.ClaseC;
+import paqueteB.ClaseD;
 
 /**
  *
@@ -11,11 +10,23 @@ package ejerciciomodificadoresacceso;
  */
 public class EjercicioModificadoresAcceso {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        //Prueba de acceso a ClaseA desde otras clases
+        //Acceso a CLaseA desde ClaseB
+        System.out.println("*** Acceso desde clase B a Clase A (mismo paquete)***");
+        new ClaseB().pruebaDesdeClaseB();
+        
+        //Acceso clase A desde clase B
+        //Clase extiende clase A
+        System.out.println("\n***Acceso desde Clase C a Clase A (Diferente paquete pero es subclase)***");
+        new ClaseC().pruebaDesdeClaseC();
+        
+        //Acceso a clase A desde clase D
+        //Clase D no es subclase y esta en otro paquete
+        System.out.println("\n***Acceso desde clase D a clase A (diferente paquete, no es subclase)***");
+        new ClaseD().pruebaDesdeClaseD();
+        
     }
     
 }
